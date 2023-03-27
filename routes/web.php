@@ -14,5 +14,13 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('home');
+    $name= "Sofia";
+    $tasks = [
+       "Prenotare ristorante per giovedì",
+       "Tagliare l' erba",
+       "Comprare marmellata di pesche",
+       "Fare allenamento",
+       "Ordinare la libreria nuova"
+    ];
+    return view('home', compact("name", "tasks"));
 });
